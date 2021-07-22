@@ -78,3 +78,14 @@ function multiplicityOfThreeAndFive(n) {
         }
     }
 }
+
+/*
+Нужно написать функцию, которая проверяет, являются ли две строки анаграммами, причем регистр букв не имеет значения.
+Учитываются лишь символы; пробелы или знаки препинания в расчет не берутся.
+*/
+function anagram(str1, str2) {
+    return str1.toLowerCase().split('').sort().join('') == str2.toLowerCase().split('').sort().join('');
+}
+
+let a = anagram('банка', 'кабан');
+console.log(a);
