@@ -60,6 +60,7 @@ function polindrom(str) {
     str = str.toLowerCase();
     return str === str.split('').reverse().join('');
 }
+//console.log(polindrom('Анна'));
 
 /*
 Требуется написать функцию, выводящую в консоль числа от 1 до n, где n — это целое число, которая функция принимает в качестве параметра, 
@@ -84,8 +85,24 @@ function multiplicityOfThreeAndFive(n) {
 Учитываются лишь символы; пробелы или знаки препинания в расчет не берутся.
 */
 function anagram(str1, str2) {
-    return str1.toLowerCase().split('').sort().join('') == str2.toLowerCase().split('').sort().join('');
+    str1 = str1.replace(/[\s.,!?]/g, "");
+    str2 = str2.replace(/[\s.,!?]/g, "");
+    return str1.toLowerCase().split('').sort().join('') === str2.toLowerCase().split('').sort().join('');
 }
+//console.log(anagram('рано', 'нора'));
 
-let a = anagram('банка', 'кабан');
-console.log(a);
+/*
+Нужно написать функцию, принимающую строку в качестве аргумента и возвращающую количество гласных, которые содержатся в строке. 
+Гласными являются «a», «e», «i», «o», «u». 
+*/
+function countVowels(str){
+    const arr = ["a", "e", "i", "o", "u"];
+    let i = 0;
+    for (let char of str) {
+        if (arr.includes(char)){
+            i++;
+        }
+    }
+    return i;
+}
+//console.log(countVowels('qwe,af'));
