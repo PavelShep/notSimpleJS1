@@ -142,3 +142,15 @@ function findString(str, arr) {
 }
 //console.log(findString('a', ['a', 'b']));
 
+/* #10 Дана строка, например, '123456'. Сделайте из нее '214365'. */
+function getPartReverse(str) {
+    let arr = str.split('');
+    for (let i = 0; i < arr.length; i++) {
+        let a = arr[i+1];
+        arr[i+1] = arr[i];
+        arr[i] = a;
+        i++;
+    }
+    return arr.join('');
+}
+//console.log(getPartReverse('123456'));
