@@ -120,9 +120,25 @@ function newReverse(arr) {
 /* #8 Дан массив с числами. Найдите среднее арифметическое его элементов (сумма элементов, делить на количество) */
 function getAverage(arr) {
     let sum = 0;
-    for(let i=0; i<arr.length; i++){
-        sum +=arr[i];
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
     }
-    return sum/arr.length;
+    return sum / arr.length;
 }
 //console.log(getAverage([3,3,3]));
+
+/* #9 Сделайте функцию inArray, которая определяет, есть в массиве элемент с заданным текстом или нет.
+Функция первым параметром должна принимать текст элемента, а вторым - массив, в котором делается поиск.
+Функция должна возвращать true или false. */
+function findString(str, arr) {
+    let isExist = false;
+    for (let element of arr) {
+        if (element === str) {
+            isExist = true;
+            break;
+        }
+    }
+    return isExist;
+}
+//console.log(findString('a', ['a', 'b']));
+
