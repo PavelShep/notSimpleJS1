@@ -146,11 +146,26 @@ function findString(str, arr) {
 function getPartReverse(str) {
     let arr = str.split('');
     for (let i = 0; i < arr.length; i++) {
-        let a = arr[i+1];
-        arr[i+1] = arr[i];
+        let a = arr[i + 1];
+        arr[i + 1] = arr[i];
         arr[i] = a;
         i++;
     }
     return arr.join('');
 }
 //console.log(getPartReverse('123456'));
+
+/* #11 В переменной day лежит какое-то число из интервала от 1 до 31. 
+Определите в какую декаду месяца попадает это число (в первую, вторую или третью).*/
+function decade(day) {
+    if (day > 0 && day <= 10) {
+        console.log('1 декада месяца');
+    } else if (day > 10 && day <= 20) {
+        console.log('2 декада месяца');
+    } else if (day > 20 && day <= 31) {
+        console.log('3 декада месяца');
+    } else {
+        console.log('Error!');
+    }
+}
+//decade(18);
