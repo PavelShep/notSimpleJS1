@@ -116,3 +116,13 @@ function newReverse(arr) {
     return arrNew;
 }
 //console.log(newReverse([1, 2, 3]));
+
+/* #8 Дан массив с числами. Найдите среднее арифметическое его элементов (сумма элементов, делить на количество) */
+function getAverage(arr) {
+    let sum = 0;
+    for(let i=0; i<arr.length; i++){
+        sum +=arr[i];
+    }
+    return sum/arr.length;
+}
+//console.log(getAverage([3,3,3]));
