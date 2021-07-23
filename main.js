@@ -169,3 +169,21 @@ function decade(day) {
     }
 }
 //decade(18);
+
+/* #12 В переменной month лежит какое-то число из интервала от 1 до 12. 
+Определите в какую пору года попадает этот месяц (зима, лето, весна, осень). */
+function timeYear(month) {
+    if (month >= 3 && month <= 5) {
+        return 'Весна';
+    } else if (month >= 6 && month <= 8) {
+        return 'Лето';
+    } else if (month >= 9 && month <= 11) {
+        return 'Осень';
+    } else if (month == 12 || month == 1 || month == 2) {
+        return 'Зима';
+    } else {
+        return 'Error!';
+    }
+}
+
+//console.log(timeYear(10))
